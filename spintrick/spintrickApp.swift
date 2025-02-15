@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct spintrickApp: App {
+    init(){
+        SpinService().spinServiceInit()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -6,14 +6,83 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B808A7A42D607BA7003519CD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B808A75F2D5FEEEB003519CD /* WidgetKit.framework */; };
+		B808A7A52D607BA7003519CD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B808A7612D5FEEEB003519CD /* SwiftUI.framework */; };
+		B808A7B22D607BA8003519CD /* SpintrickWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B808A7A32D607BA7003519CD /* SpintrickWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B808A7B02D607BA8003519CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B808A7342D5FC976003519CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B808A7A22D607BA7003519CD;
+			remoteInfo = SpintrickWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B808A7782D5FEEEC003519CD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B808A7B22D607BA8003519CD /* SpintrickWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B808A73C2D5FC976003519CD /* spintrick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spintrick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B808A75F2D5FEEEB003519CD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B808A7612D5FEEEB003519CD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B808A7A32D607BA7003519CD /* SpintrickWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SpintrickWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B808A74E2D5FCB7C003519CD /* Exceptions for "spintrick" folder in "spintrick" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B808A73B2D5FC976003519CD /* spintrick */;
+		};
+		B808A7B62D607BA8003519CD /* Exceptions for "SpintrickWidget" folder in "SpintrickWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B808A7A22D607BA7003519CD /* SpintrickWidgetExtension */;
+		};
+		B808A7B92D607BFE003519CD /* Exceptions for "SpintrickWidget" folder in "spintrick" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SpintrickWidgetAttributes.swift,
+			);
+			target = B808A73B2D5FC976003519CD /* spintrick */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B808A73E2D5FC976003519CD /* spintrick */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B808A74E2D5FCB7C003519CD /* Exceptions for "spintrick" folder in "spintrick" target */,
+			);
 			path = spintrick;
+			sourceTree = "<group>";
+		};
+		B808A7A62D607BA7003519CD /* SpintrickWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B808A7B92D607BFE003519CD /* Exceptions for "SpintrickWidget" folder in "spintrick" target */,
+				B808A7B62D607BA8003519CD /* Exceptions for "SpintrickWidget" folder in "SpintrickWidgetExtension" target */,
+			);
+			path = SpintrickWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +95,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B808A7A02D607BA7003519CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B808A7A52D607BA7003519CD /* SwiftUI.framework in Frameworks */,
+				B808A7A42D607BA7003519CD /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				B808A73E2D5FC976003519CD /* spintrick */,
+				B808A7A62D607BA7003519CD /* SpintrickWidget */,
+				B808A75E2D5FEEEB003519CD /* Frameworks */,
 				B808A73D2D5FC976003519CD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +121,18 @@
 			isa = PBXGroup;
 			children = (
 				B808A73C2D5FC976003519CD /* spintrick.app */,
+				B808A7A32D607BA7003519CD /* SpintrickWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B808A75E2D5FEEEB003519CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B808A75F2D5FEEEB003519CD /* WidgetKit.framework */,
+				B808A7612D5FEEEB003519CD /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +145,12 @@
 				B808A7382D5FC976003519CD /* Sources */,
 				B808A7392D5FC976003519CD /* Frameworks */,
 				B808A73A2D5FC976003519CD /* Resources */,
+				B808A7782D5FEEEC003519CD /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B808A7B12D607BA8003519CD /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				B808A73E2D5FC976003519CD /* spintrick */,
@@ -69,6 +161,28 @@
 			productName = spintrick;
 			productReference = B808A73C2D5FC976003519CD /* spintrick.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B808A7A22D607BA7003519CD /* SpintrickWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B808A7B32D607BA8003519CD /* Build configuration list for PBXNativeTarget "SpintrickWidgetExtension" */;
+			buildPhases = (
+				B808A79F2D607BA7003519CD /* Sources */,
+				B808A7A02D607BA7003519CD /* Frameworks */,
+				B808A7A12D607BA7003519CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B808A7A62D607BA7003519CD /* SpintrickWidget */,
+			);
+			name = SpintrickWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = SpintrickWidgetExtension;
+			productReference = B808A7A32D607BA7003519CD /* SpintrickWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +195,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					B808A73B2D5FC976003519CD = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					B808A7A22D607BA7003519CD = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -100,12 +217,20 @@
 			projectRoot = "";
 			targets = (
 				B808A73B2D5FC976003519CD /* spintrick */,
+				B808A7A22D607BA7003519CD /* SpintrickWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B808A73A2D5FC976003519CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B808A7A12D607BA7003519CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +247,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B808A79F2D607BA7003519CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B808A7B12D607BA8003519CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B808A7A22D607BA7003519CD /* SpintrickWidgetExtension */;
+			targetProxy = B808A7B02D607BA8003519CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B808A7482D5FC977003519CD /* Debug */ = {
@@ -255,11 +395,14 @@
 				DEVELOPMENT_TEAM = PM7L7T27JN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = spintrick/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -267,9 +410,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.jumperonjava.spintrick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -284,11 +431,14 @@
 				DEVELOPMENT_TEAM = PM7L7T27JN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = spintrick/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,6 +446,64 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.jumperonjava.spintrick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B808A7B42D607BA8003519CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PM7L7T27JN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpintrickWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpintrickWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jumperonjava.spintrick.SpintrickWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B808A7B52D607BA8003519CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PM7L7T27JN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpintrickWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpintrickWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jumperonjava.spintrick.SpintrickWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,6 +527,15 @@
 			buildConfigurations = (
 				B808A74B2D5FC977003519CD /* Debug */,
 				B808A74C2D5FC977003519CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B808A7B32D607BA8003519CD /* Build configuration list for PBXNativeTarget "SpintrickWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B808A7B42D607BA8003519CD /* Debug */,
+				B808A7B52D607BA8003519CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
